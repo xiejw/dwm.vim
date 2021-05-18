@@ -223,9 +223,12 @@ if g:dwm_map_keys
   endif
 endif
 
-if has('autocmd')
-  augroup dwm
-    au!
-    au BufWinEnter * if &l:buflisted || &l:filetype == 'help' | call DWM_AutoEnter() | endif
-  augroup end
-endif
+" CHANGE: xiejw
+" remove this block so opening a new file will not move it to master
+"
+" if has('autocmd')
+"   augroup dwm
+"     au!
+"     au BufWinEnter * if &l:buflisted || &l:filetype == 'help' | call DWM_AutoEnter() | endif
+"   augroup end
+" endif
